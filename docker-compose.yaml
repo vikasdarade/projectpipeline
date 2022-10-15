@@ -1,0 +1,8 @@
+version: '3'
+services:
+  tomcat_service:
+    image: "tomcat"
+    ports:
+      - "8090:8080"
+    volumes:
+      - "/home/ansible/project:/usr/local/tomcat/webapps/"

@@ -1,0 +1,22 @@
+---
+- hosts: dev
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+    - name: copy war file
+      action: copy src=/home/ansible/project/webapp/target/webapp.war dest=/home/ansible/project/
+
+    - name: copy docker-compose file
+      action: copy src=/home/ansible/project/docker-compose.yaml dest=/home/ansible/
+
+    - name: downall services
+      command: docker-compose down
+
+    - name: start container
+      command: docker-compose up -d  
+      
+  
+
