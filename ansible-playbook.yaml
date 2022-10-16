@@ -10,13 +10,13 @@
       command: sudo rm -rf /home/ansible/project/*
       
     - name: copy war file
-      action: copy src=/home/ansible/project/webapp/target/webapp.war dest=/home/ansible/project/
+      action: copy src=/home/ansible/project1/webapp/target/webapp.war dest=/home/ansible/project/
       
     - name: docker start
       command: sudo service docker start
 
     - name: copy docker-compose file
-      action: copy src=/home/ansible/project/docker-compose.yaml dest=/home/ansible/
+      action: copy src=/home/ansible/project1/docker-compose.yaml dest=/home/ansible/
 
     - name: downall services
       command: docker-compose down
