@@ -3,3 +3,4 @@ om namha shivay
 shree ganeshaya namha
 shiv shiv shambho
 om namo shivay
+jai mata di
